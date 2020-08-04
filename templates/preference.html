@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Trip Slate</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="limiter">
+		<div id="mySidenav" class="sidenav">
+			  <div style="position: fixed;left: 60px;top: 20px;" onclick="Nav()" class="profile">
+					<img class="profile-tilt" style="width: 80px; border-radius: 20px;" src="/static/images/profile.png">
+			  </div>
+			  <a style="margin-left: 50px;margin-top: 40px;margin-bottom: 20px" class="userName" href="#">Test</a>
+			  <a href="#">My Car</a>
+			  <a href="#">My Trips</a>
+			  <a href="/">Logout</a>
+		</div>
+		<div class="container-login100">
+			<div class="wrap-login200">
+				<div class="login100-pic add-margin-top js-tilt" data-tilt>
+					<img src="/static/images/travel.png" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form">
+					<span class="login200-form-title">
+						Enter Trip Details
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid name is required">
+						<input id="sloc" class="input100" type="text" name="sloc" placeholder="Starting Location">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input id="eloc" class="input100" type="text" name="eloc" placeholder="Ending Location">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input id="detour" class="input100" type="number" name="detour" placeholder="Detour in kms">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-car" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input id="duration" class="input100" type="number" name="duration" placeholder="Duration in hrs">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-hourglass" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input id="stime" class="input100" type="time" name="stime" placeholder="Staring time">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input id="date" class="input100" type="date" name="date" placeholder="Date">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-calendar" aria-hidden="true"></i>
+						</span>
+					</div>
+
+<!--					<div class="wrap-input100 validate-input" data-validate = "Password is required">-->
+<!--						<label class="checkbox-inline">-->
+<!--						 <input id="bf" type="checkbox" name="bf"> BF-->
+<!--						</label>-->
+<!--						<label class="checkbox-inline">-->
+<!--						  <input id="ln" type="checkbox" name="ln"> LN-->
+<!--						</label>-->
+<!--						<label class="checkbox-inline">-->
+<!--						  <input id="dn" type="checkbox" name="dn"> DN-->
+<!--						</label>-->
+<!--						<span class="focus-input100"></span>-->
+<!--					</div>-->
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Generate Itineraries
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--	<script src="/static/vendor/jquery/jquery-ui.js"></script>-->
+<!--===============================================================================================-->
+	<script src="/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="/static/vendor/jquery/jquery.loading.block.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+		$('.profile-tilt').tilt({
+			scale: 1.1
+		})
+		var isNavOpen = false
+		function Nav() {
+		  if (!isNavOpen) {
+			document.getElementById("mySidenav").style.width = "250px";
+			isNavOpen = true
+		  } else {
+		  	document.getElementById("mySidenav").style.width = "0";
+		  	isNavOpen = false
+		  }
+		}
+	</script>
+<!--===============================================================================================-->
+	<script src="/static/js/preference.js"></script>
+</body>
+</html>

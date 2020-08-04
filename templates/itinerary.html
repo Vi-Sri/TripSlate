@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Trip Slate</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+<!--===============================================================================================-->
+
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		/* Float four columns side by side */
+		.column {
+		  float: left;
+		  width: 23%;
+		  padding: 0 10px;
+		}
+
+		/* Remove extra left and right margins, due to padding */
+		.row {margin-right: 200px;}
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		/* Responsive columns */
+		@media screen and (max-width: 600px) {
+		  .column {
+			width: 100%;
+			display: block;
+			margin-bottom: 20px;
+		  }
+		}
+
+		/* Style the counter cards */
+	.card {
+	    width: 100px;
+		height: 35px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		padding-bottom: 5px;
+		padding-top: 5px;
+		text-align: center;
+		background-color: #f1f1f1;
+		}
+</style>
+
+
+</head>
+<body>
+	<div class="limiter">
+		<div id="mySidenav" class="sidenav">
+			  <div style="position: fixed;left: 60px;top: 20px;" onclick="Nav()" class="profile">
+					<img class="profile-tilt" style="width: 80px;border-radius: 20px;" src="/static/images/profile.png">
+			  </div>
+			  <a style="margin-left: 50px;margin-top: 40px;margin-bottom: 20px" class="userName" href="#">Test</a>
+			  <a href="#">My Car</a>
+			  <a href="#">My Trips</a>
+			  <a href="/">Logout</a>
+		</div>
+		<div class="container-login100">
+			<div class="widget1">
+				<div class="left-panel panel">
+					<div class="date">
+						Thursday, 30 July 2020
+					</div>
+					<div class="city">
+						New York
+					</div>
+					<div class="temp">
+					   80&deg;F
+					</div>
+				</div>
+        	</div>
+			 <div class="wrap-login100 table-css">
+				 <h5 style="margin-top:6px; margin-left:30px;">Top categories for you :</h5>
+				 <div class="row">
+					  <div class="column">
+						<div class="card">
+						  <p>History</p>
+						</div>
+					  </div>
+
+					  <div class="column">
+						<div class="card">
+						  <p>Arts</p>
+						</div>
+					  </div>
+
+					  <div class="column">
+						<div class="card">
+						  <p>Food</p>
+						</div>
+					  </div>
+
+					  <div class="column">
+						<div class="card">
+						  <p>Museum</p>
+						</div>
+					  </div>
+
+					</div>
+				 <table>
+				  <thead>
+					<tr>
+					  <th>Starting time
+					  <th>Ending Time
+					  <th>Location
+					  <th>Type
+					  <th>Min Temp
+					  <th>Max Temp
+					  <th>Weather
+				  </thead>
+				  <tbody>
+
+				  </tbody>
+				</table>
+				 <div class="container-login100-form-btn">
+						<button id="viewMap" class="login100-form-btn button-mod">
+							Send to Navigation
+						</button>
+					</div>
+			 </div>
+			<div class="widget2">
+				<div class="left-panel panel">
+					<div class="date">
+						Car Status
+					</div>
+					<div class="city">
+						Refuel Needed
+					</div>
+					<div class="temp">
+					   14 kmpl
+					</div>
+				</div>
+        	</div>
+		</div>
+	</div>
+
+<!--===============================================================================================-->
+	<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/tilt/tilt.jquery.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/js/itinerary.js"></script>
+	<script>
+		$('.profile-tilt').tilt({
+			scale: 1.1
+		})
+		var isNavOpen = false
+		function Nav() {
+		  if (!isNavOpen) {
+			document.getElementById("mySidenav").style.width = "250px";
+			isNavOpen = true
+		  } else {
+		  	document.getElementById("mySidenav").style.width = "0";
+		  	isNavOpen = false
+		  }
+		}
+	</script>
+</body>
+</html>
